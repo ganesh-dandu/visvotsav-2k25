@@ -44,12 +44,17 @@ section{
    NAVBAR
    ======================= */
 .header {
-  position: absolute;   
+  position: fixed;   
   top: 2rem;           
   left: 50%;
   transform: translateX(-50%); 
   z-index: 1000;
   width: max-content;
+  background: rgba(11, 11, 15, 0.4); /* semi-transparent */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px); /* Safari support */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
 }
 
 
@@ -225,7 +230,7 @@ section{
 	bottom: 2rem;
 	left: 50%;
 	transform: translateX(-50%);
-	font-size: 2.5rem;
+	font-size: 2rem;
 	color: #f5f5f547;
 	animation: scroll 2s ease-in-out infinite;
 	font-weight: 100;
@@ -262,7 +267,8 @@ section{
 	font-size: 2rem;
 	font-weight: 700;
 	color: #f5f5f5;
-	line-height: 140%;
+	line-height: 1.5;
+  letter-spacing: -0.02em;
 }
 
 .heading-grad{
@@ -278,6 +284,33 @@ section{
    TECHNICAL EVENTS
    ======================= */
 
+.technical-events .badge {
+  margin-bottom: 1.5rem;
+}
+
+.text{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.text .left h2{
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #f5f5f5;
+  margin-bottom: 0.25rem;
+}
+
+.text .left p{
+  font-size: 0.875rem;
+  color: #8C8C8C;
+  max-width: 600px;
+  line-height: 1.5;
+}
+
 .grid-section {
   background: #0B0B0F;
 }
@@ -285,7 +318,23 @@ section{
 .grid-container {
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(3, 1fr); /* Desktop default = 3x2 */
+  grid-template-columns: repeat(3, 1fr); 
+}
+
+.warning p{
+  text-align: center;
+  color: #C82323;
+  background-color: #C8232310;
+  font-size: 0.875rem;
+  margin-top: 2rem;
+  border: 1px solid #C8232320;
+  width: max-content;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  text-wrap: wrap;
 }
 
 /* Grid items */
@@ -367,6 +416,208 @@ section{
   margin-bottom: 2rem;
 }
 
+/* =======================
+   OUR COMMITTEE
+   ======================= */
+
+.committee-section {
+  background: #0B0B0F;
+}
+
+.committee-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(4, 1fr); /* Desktop: 4x2 */
+}
+
+/* Committee cards */
+.committee-card {
+  background: #1E1E25;
+  border: 1px solid #2C2C34;
+  border-radius: 10px;
+  padding: 0.625rem;
+  color: #f5f5f5;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+}
+
+.committee-card .left{
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 0.5rem;
+  border-radius: 10px;
+  aspect-ratio: 1 / 1 ;
+  flex-grow: 1;
+}
+
+.committee-card .left img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.committee-card .right{
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: space-between;
+}
+
+.committee-card .right h3{
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #f5f5f5;
+  margin-bottom: 0.25rem;
+  font-style: capitalize;
+}
+
+.committee-card .right h4{
+  font-size: 0.75rem;
+  color: #838383;
+  margin-bottom: 0.15rem;
+  font-weight: 400;
+  font-style: capitalize;
+}
+
+.committee-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+}
+
+.participate{
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.participate i{
+  width: 3.125rem;
+  height: 3.125rem;
+  border: 2px solid #FE671520;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;  
+  align-items: center;
+  color: var(--primary-color);
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  background-color: #FE671510;
+  transition: all .3s ease;
+}
+
+.participate i:hover{
+  background-color: var(--primary-color);
+  color: #fff;
+  border: 2px solid var(--primary-color);
+  box-shadow: 
+  0px 42px 12px rgba(255, 107, 26, 0),
+  0px 27px 11px rgba(255, 107, 26, 0.01),
+  0px 15px 9px rgba(255, 107, 26, 0.05),
+  0px 7px 7px rgba(255, 107, 26, 0.09),
+  0px 2px 4px rgba(255, 107, 26, 0.10);
+}
+
+.participate h3{
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #f5f5f5;
+  margin-bottom: 0.5rem;
+} 
+
+.participate p{
+  font-size: 0.875rem;
+  color: #8c8c8c;
+}
+
+.cta .container{
+  text-align: center;
+  padding: 3rem 1rem;
+  background-color: var(--primary-color);
+  border-radius: 12px;
+  box-shadow: 
+  0px 42px 12px rgba(255, 107, 26, 0),
+  0px 27px 11px rgba(255, 107, 26, 0.01),
+  0px 15px 9px rgba(255, 107, 26, 0.05),
+  0px 7px 7px rgba(255, 107, 26, 0.09),
+  0px 2px 4px rgba(255, 107, 26, 0.10);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta .container h2{
+  font-size: 3rem;
+  font-weight: 700;
+  color: #f5f5f5;
+  line-height: 100%;
+  margin-bottom: 1rem;
+  letter-spacing: -2px
+}
+
+.cta .container p{
+  font-size: 1.125rem;
+  color: #f5f5f5;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+.register-btn-cta{
+  background-color: #f5f5f5;
+  padding: 0.75rem 1.5rem;
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 
+  0px 42px 12px rgba(255, 107, 26, 0),
+  0px 27px 11px rgba(255, 107, 26 , 0.01),
+  0px 15px 9px rgba(255, 107, 26    , 0.05),
+  0px 7px 7px rgba(255, 107, 26   , 0.09);
+}
+
+.circle{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: #ffffff10;
+}
+
+.circle-1{
+  top: -50px;
+  left: -50px;
+  animation: move1 6s ease-in-out infinite;
+}
+
+.circle-2{
+  bottom: -50px;
+  right: -50px;
+  animation: move2 6s ease-in-out infinite;
+}
+
+@keyframes move1 {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(20px, 20px);
+  }
+}
+
+@keyframes move2 {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-20px, -20px);
+  }
+}
 
 /* =======================
    RESPONSIVE
@@ -381,6 +632,10 @@ section{
   }
 
   .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .committee-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -426,7 +681,24 @@ section{
 
   .container{
     width: 100%;
-    padding: 0 2rem;
+    padding: 0 1.5rem;
+  }
+
+  .header{
+    width: 90%;
+  }
+
+  .header .container{
+    padding: 1rem;
+    width: 100%;
+  }
+
+  .navbar .register-btn{
+    display: none;
+  }
+
+  .header img{
+    width: 90px;
   }
 
 	section{
@@ -445,5 +717,23 @@ section{
 
   .grid-container {
     grid-template-columns: 1fr;
+  }
+
+  .committee-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .warning p{
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+  }
+
+  .cta .container h2{
+    font-size: 2rem;
+  }
+
+  .cta .container p{
+    font-size: 1rem;
+    letter-spacing: normal;
   }
 }
