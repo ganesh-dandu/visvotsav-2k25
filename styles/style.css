@@ -424,12 +424,18 @@ section{
 
 @media (max-width: 480px) {
 
+  .container{
+    width: 100%;
+    padding: 0 2rem;
+  }
+
 	section{
 		margin-bottom: 50px;
 	}
 
   .hero-content h1 {
-    font-size: 1.6rem;
+    width: 100%;
+    font-size: 1.75rem;
   }
 
   .register-btn {
