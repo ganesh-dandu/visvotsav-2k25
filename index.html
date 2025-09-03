@@ -1,44 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 
-    <!-- Phosphor Icons -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"/>
+  <!-- Phosphor Icons -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"/>
 
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="styles/style.css">
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles/style.css">
 
-    <title>Visvotsav - Home</title>
+  <title>Visvotsav - Home</title>
 </head>
 <body>
-    <div class="main">
-        <div class="hero">
-            <div class="navbar">
-                <div class="logo">
-                    <img src="img/Logo.svg" alt="Visvotsav Logo">
-                </div>
-                <div class="nav-links">
-                    <a href="#">Home</a>
-                    <a href="#">About</a>
-                    <a href="#">Events</a>
-                    <a href="#">Committe</a>
-                </div>
-                <div class="menu-icon">
-                    <i class="ph ph-list"></i>
-                </div>
-                <div class="cta">
-                    <a href="#" class="register-btn">Register Now</a>
-                </div>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container navbar">
+      <div class="logo">
+        <img src="img/Logo.svg" alt="Visvotsav Logo">
+      </div>
+
+      <!-- Nav links -->
+      <nav class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Events</a>
+        <a href="#">Committee</a>
+      </nav>
+
+      <a href="#" class="register-btn">Register Now</a>
+
+      <!-- Hamburger -->
+      <div class="menu-icon">
+        <i class="ph ph-list"></i>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-content">
+        <div class="scroll"><i class="ph ph-arrow-down"></i></div>
+        <div class="badge">
+            <span class="circle"></span>
+            <span>PBR VITS</span>
+        </div>
+        <h1>Visvotsav <span>2K25</span><br>A State Level TechnoFest</h1>
+        <p>Celebrate innovation, creativity, and culture at PBR VITS, Kavali.</p>
+        <div class="info">
+            <div class="date">
+                <i class="ph ph-calendar"></i>
+                <span>March 14-16, 2025</span>
             </div>
-            <div class="content"></div>
+            <div class="location">
+                <i class="ph ph-map-pin"></i>
+                <span>PBR VITS, Kavali</span>
+            </div>
+        </div>
+
+        <div class="cta">
+            <a href="#" class="register-btn">Register Now</a>
         </div>
     </div>
+  </section>
+
+  <section class="about">
+    <div class="light-leak"></div>
+    <div class="container about-content">
+        <div class="badge">
+            <span class="circle"></span>
+            <span>About Visvotsav</span>
+        </div>
+        <h2>Visvotsav is the State Level TechnoFest of <span class="heading-grad">PBR VITS</span>, Kavali. It’s where innovation meets celebration, bringing together students to compete, perform, and create <span class="heading-grad">unforgettable</span> memories.</h2>
+    </div>
+  </section>
+
+  <section class="technical-events">
+    <div class="container">
+        <div class="badge">
+            <span class="circle"></span>
+            <span>Technical Events</span>
+        </div>
+
+    <section class="grid-section">
+        <div class="grid-container">
+            <div class="grid-item">
+                <div class="image">
+                  <img src="img/paper-presentation.png" alt="paper-presentation">
+                </div>
+                <div class="heading">
+                  <h3>Paper Presentation</h3>
+                  <div class="people">
+                    <i class="ph-fill ph-users"></i>
+                    <h5>3</h5>
+                  </div>
+                  <div class="price">
+                    <i class="ph-fill ph-currency-inr"></i>
+                    <h5>300</h5>
+                  </div>
+                </div>
+                <p>Present your research and ideas with clarity and impact.</p>
+                <div class="cta">
+                    <a style="display:block"href="#" class="committee-btn">View Committee</a>
+                </div>
+            </div>
+            <div class="grid-item">
+                <div class="image">
+                  <img src="img/paper-presentation.png" alt="paper-presentation">
+                </div>
+                <div class="heading">
+                  <h3>Paper Presentation</h3>
+                  <div class="people">
+                    <i class="ph-fill ph-users"></i>
+                    <h5>3</h5>
+                  </div>
+                  <div class="price">
+                    <i class="ph-fill ph-currency-inr"></i>
+                    <h5>300</h5>
+                  </div>
+                </div>
+                <p>Present your research and ideas with clarity and impact.</p>
+                <div class="cta">
+                    <a style="display:block"href="#" class="committee-btn">View Committee</a>
+                </div>
+            </div>
+            <div class="grid-item">
+                <div class="image">
+                  <img src="img/paper-presentation.png" alt="paper-presentation">
+                </div>
+                <div class="heading">
+                  <h3>Paper Presentation</h3>
+                  <div class="people">
+                    <i class="ph-fill ph-users"></i>
+                    <h5>3</h5>
+                  </div>
+                  <div class="price">
+                    <i class="ph-fill ph-currency-inr"></i>
+                    <h5>300</h5>
+                  </div>
+                </div>
+                <p>Present your research and ideas with clarity and impact.</p>
+                <div class="cta">
+                    <a style="display:block"href="#" class="committee-btn">View Committee</a>
+                </div>
+            </div>
+            <div class="grid-item">
+                <div class="image">
+                  <img src="img/paper-presentation.png" alt="paper-presentation">
+                </div>
+                <div class="heading">
+                  <h3>Paper Presentation</h3>
+                  <div class="people">
+                    <i class="ph-fill ph-users"></i>
+                    <h5>3</h5>
+                  </div>
+                  <div class="price">
+                    <i class="ph-fill ph-currency-inr"></i>
+                    <h5>300</h5>
+                  </div>
+                </div>
+                <p>Present your research and ideas with clarity and impact.</p>
+                <div class="cta">
+                    <a style="display:block"href="#" class="committee-btn">View Committee</a>
+                </div>
+            </div>
+            <div class="grid-item">
+                <div class="image">
+                  <img src="img/paper-presentation.png" alt="paper-presentation">
+                </div>
+                <div class="heading">
+                  <h3>Paper Presentation</h3>
+                  <div class="people">
+                    <i class="ph-fill ph-users"></i>
+                    <h5>3</h5>
+                  </div>
+                  <div class="price">
+                    <i class="ph-fill ph-currency-inr"></i>
+                    <h5>300</h5>
+                  </div>
+                </div>
+                <p>Present your research and ideas with clarity and impact.</p>
+                <div class="cta">
+                    <a style="display:block"href="#" class="committee-btn">View Committee</a>
+                </div>
+            </div>
+            <div class="grid-item">
+                <div class="image">
+                  <img src="img/paper-presentation.png" alt="paper-presentation">
+                </div>
+                <div class="heading">
+                  <h3>Paper Presentation</h3>
+                  <div class="people">
+                    <i class="ph-fill ph-users"></i>
+                    <h5>3</h5>
+                  </div>
+                  <div class="price">
+                    <i class="ph-fill ph-currency-inr"></i>
+                    <h5>300</h5>
+                  </div>
+                </div>
+                <p>Present your research and ideas with clarity and impact.</p>
+                <div class="cta">
+                    <a style="display:block"href="#" class="committee-btn">View Committee</a>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    </div>
+  </section>
+
+
+  <!-- JS for mobile nav -->
+<script src="app.js"></script>
 </body>
 </html>
