@@ -581,7 +581,7 @@ section{
   0px 7px 7px rgba(255, 107, 26   , 0.09);
 }
 
-.circle{
+.circles{
   width: 200px;
   height: 200px;
   border-radius: 50%;
@@ -680,6 +680,7 @@ section{
 @media (max-width: 480px) {
 
   .container{
+    max-width: 100%;
     width: 100%;
     padding: 0 1.5rem;
   }
@@ -702,12 +703,12 @@ section{
   }
 
 	section{
-		margin-bottom: 50px;
+		margin-bottom: 100px;
 	}
 
   .hero-content h1 {
     width: 100%;
-    font-size: 1.75rem;
+    font-size: 1.8rem;
   }
 
   .register-btn {
@@ -735,5 +736,9 @@ section{
   .cta .container p{
     font-size: 1rem;
     letter-spacing: normal;
+  }
+
+  .about-content h2 {
+    font-size: 1.5rem;
   }
 }
