@@ -619,6 +619,54 @@ section{
   }
 }
 
+.emoji{
+  position: absolute;
+  font-size: 2rem;
+  opacity: 0.8;
+  animation: float 4s ease-in-out infinite;
+  padding: 0.75rem;
+  aspect-ratio: 1 / 1;
+  background-color: #ffffff10;
+  border-radius: 50%;
+  border: 1px solid #ffffff20;
+  animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.emojies1{
+  top: 22%;
+  left: 22%;
+  animation-delay: 0s;
+}
+
+.emojies2{
+  font-size: 1.5rem;
+  top: 30%;
+  right: 25%;
+  animation-delay: 1s;
+}
+
+.emojies3{
+  bottom: 30%;
+  left: 25%;
+  animation-delay: 2s;
+}
+
+.emojies4{
+  bottom: 28%;
+  right: 28%;
+  animation-delay: 3s;
+  font-size: 1rem;
+}
+
 /* =======================
    RESPONSIVE
    ======================= */
@@ -674,6 +722,14 @@ section{
 
   .hero-content p {
     font-size: 0.95rem;
+  }
+
+  .header{
+    width: 80%;
+  }
+
+  .navbar .register-btn{
+    display: none;
   }
 }
 
