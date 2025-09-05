@@ -823,7 +823,8 @@ section{
   }
 
 	section{
-		margin-bottom: 100px;
+		margin-bottom: 50px;
+    padding: 50px 0;
 	}
 
   .hero-content h1 {
