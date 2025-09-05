@@ -18,9 +18,14 @@ body {
   font-family: 'DM Sans', sans-serif;
 }
 
-section{
+/* section{
+  /* padding-top: 100px; */
 	margin-bottom: 200px;
 }
+
+.our-committee{
+  padding-top: 100px;
+} */
 
 .light-leak{
 	width: 350px;
@@ -253,6 +258,8 @@ section{
    ======================= */
 .about{
 	width: 100%;
+  padding: 200px 0;
+  margin: 0 autp;
 }
 
 .about-content{
@@ -286,6 +293,11 @@ section{
 /* =======================
    TECHNICAL EVENTS
    ======================= */
+
+.technical-events{
+  margin: 0 auto;
+  padding: 100px 0;
+}
 
 .text{
   display: flex;
@@ -419,9 +431,19 @@ section{
   margin-bottom: 2rem;
 }
 
+.cultural-events{
+  margin: 0 auto;
+  padding: 100px 0;
+}
+
 /* =======================
    OUR COMMITTEE
    ======================= */
+
+.our-committee{
+  margin: 0 auto;
+  padding: 100px 0;
+}
 
 .committee-section {
   background: #0B0B0F;
