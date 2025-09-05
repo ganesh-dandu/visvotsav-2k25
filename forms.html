@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Poster Presentation – Registration</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root { --primary:#FE6715; }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    min-height:100svh;background:#0B0B0F;color:#f5f5f5;font-family:'DM Sans',system-ui,sans-serif;
+    display:flex;align-items:flex-start;justify-content:center;padding:32px
+  }
+  .card{
+    width:100%;max-width:780px;background:#ffffff0d;border:1px solid #ffffff1a;border-radius:14px;
+    padding:24px;backdrop-filter:blur(12px);display:grid;gap:16px
+  }
+  h1{font-size:1.6rem;letter-spacing:-.02em}
+  .sub{color:#8c8c8c;margin-top:-4px;margin-bottom:6px}
+  .badge{display:inline-flex;gap8:8px;align-items:center;border:1px solid #ffffff2b;background:#ffffff14;
+    padding:6px 12px;border-radius:8px;font-size:.8rem}
+  .badge i{width:8px;height:8px;background:var(--primary);border-radius:50%;box-shadow:0 0 8px var(--primary)}
+  form{display:grid;gap:16px}
+  .group{display:grid;gap:10px}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .row-3{grid-template-columns:repeat(3,1fr)}
+  label{font-size:.92rem}
+  input[type="text"],input[type="email"],input[type="tel"]{
+    width:100%;padding:12px 14px;border-radius:10px;background:#0B0B0F;border:1px solid #ffffff2b;color:#f5f5f5;
+    font-size:.98rem
+  }
+  input:focus{outline:none;border-color:var(--primary)}
+  .field{display:grid;gap:6px}
+  .help{color:#8c8c8c;font-size:.8rem}
+  .radio-group{display:grid;gap:10px;padding:12px;border:1px solid #ffffff22;border-radius:10px;background:#ffffff0a}
+  .radio-title{font-weight:600;margin-bottom:2px}
+  .radios{display:grid;gap:8px}
+  .radios.inline{grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+  .radios label{display:flex;gap:8px;align-items:center;font-size:.95rem;color:#dcdcdc}
+  .actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+  button{
+    background:var(--primary);color:#fff;border:none;border-radius:10px;padding:12px 18px;font-weight:600;
+    box-shadow:0 27px 11px rgba(255,107,26,0.01),0 15px 9px rgba(255,107,26,0.05),0 7px 7px rgba(255,107,26,0.09),0 2px 4px rgba(255,107,26,0.10);
+    cursor:pointer;transition:opacity .2s ease
+  }
+  button:hover{opacity:.92}
+  .note{color:#8c8c8c;font-size:.85rem}
+  @media (max-width:720px){
+    .row,.radios.inline{grid-template-columns:1fr}
+    .card{padding:18px}
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="badge"><i></i> Poster Presentation</div>
+    <h1>Registration Form</h1>
+    <p class="sub">Showcase concepts visually and creatively on academic posters.</p>
+
+    <form
+      action="https://docs.google.com/forms/d/e/1FAIpQLSexnUE9NjyIQsCzOAo_W1iN_GXnzd-tgqWUlsdqGmt8EWtM5A/formResponse"
+      method="POST" target="_self" accept-charset="utf-8" id="gform">
+
+      <!-- Email *  (TODO: replace name with entry.<id> for your Email field) -->
+      <div class="field">
+        <label for="email">Email *</label>
+        <input id="email" type="email" name="entry.EMAIL_ID_TODO" placeholder="Valid email" required>
+      </div>
+
+      <!-- Participant 1 -->
+      <div class="row">
+        <div class="field">
+          <label for="p1name">Name of Participant 1 *</label>
+          <!-- mapped from your prefill: entry.851140188 -->
+          <input id="p1name" type="text" name="entry.851140188" placeholder="Full name" required>
+        </div>
+        <div class="field">
+          <label for="p1roll">Roll Number of Participant 1 *</label>
+          <!-- mapped from your prefill: entry.300362305 -->
+          <input id="p1roll" type="text" name="entry.300362305" placeholder="e.g., 2273A39079" required>
+        </div>
+      </div>
+
+      <!-- Mobile * (primary contact) -->
+      <div class="field">
+        <label for="mobile">Mobile Number *</label>
+        <!-- mapped from your prefill: entry.1196342405 -->
+        <input id="mobile" type="tel" name="entry.1196342405" placeholder="10-digit number" pattern="[0-9]{10}" required>
+        <div class="help">We'll use this for updates.</div>
+      </div>
+
+      <!-- Participant 2 (optional) -->
+      <div class="row">
+        <div class="field">
+          <label for="p2name">Name of Participant 2</label>
+          <!-- TODO: replace with entry.<id> for P2 name -->
+          <input id="p2name" type="text" name="entry.P2_NAME_ID_TODO" placeholder="Full name">
+        </div>
+        <div class="field">
+          <label for="p2roll">Roll Number of Participant 2</label>
+          <!-- TODO: replace with entry.<id> for P2 roll -->
+          <input id="p2roll" type="text" name="entry.P2_ROLL_ID_TODO" placeholder="Roll no">
+        </div>
+      </div>
+
+      <!-- Participant 3 (optional) -->
+      <div class="row">
+        <div class="field">
+          <label for="p3name">Name of Participant 3</label>
+          <!-- TODO: replace with entry.<id> for P3 name -->
+          <input id="p3name" type="text" name="entry.P3_NAME_ID_TODO" placeholder="Full name">
+        </div>
+        <div class="field">
+          <label for="p3roll">Roll Number of Participant 3</label>
+          <!-- TODO: replace with entry.<id> for P3 roll -->
+          <input id="p3roll" type="text" name="entry.P3_ROLL_ID_TODO" placeholder="Roll no">
+        </div>
+      </div>
+
+      <!-- Branch (radio) -->
+      <div class="radio-group">
+        <div class="radio-title">Select The Branch You Want to Participate in *</div>
+        <!-- mapped from your prefill: entry.768996503 -->
+        <div class="radios">
+          <label><input type="radio" name="entry.768996503" value="CIVIL / MECH" required> CIVIL / MECH</label>
+          <label><input type="radio" name="entry.768996503" value="EEE"> EEE</label>
+          <label><input type="radio" name="entry.768996503" value="ECE"> ECE</label>
+          <label><input type="radio" name="entry.768996503" value="CSE"> CSE</label>
+          <label><input type="radio" name="entry.768996503" value="AIML"> AIML</label>
+          <label><input type="radio" name="entry.768996503" value="IOT"> IOT</label>
+          <label><input type="radio" name="entry.768996503" value="AI"> AI</label>
+          <label><input type="radio" name="entry.768996503" value="Other"> Other…</label>
+        </div>
+      </div>
+
+      <!-- Year of Study (radio) -->
+      <div class="radio-group">
+        <div class="radio-title">Year of Study *</div>
+        <!-- mapped from your prefill: entry.1918381085 -->
+        <div class="radios inline">
+          <label><input type="radio" name="entry.1918381085" value="I Year" required> I Year</label>
+          <label><input type="radio" name="entry.1918381085" value="II Year"> II Year</label>
+          <label><input type="radio" name="entry.1918381085" value="III Year"> III Year</label>
+          <label><input type="radio" name="entry.1918381085" value="IV Year"> IV Year</label>
+        </div>
+      </div>
+
+      <!-- College Name -->
+      <div class="field">
+        <label for="college">Your College Name *</label>
+        <!-- mapped from your prefill: entry.1981061594 -->
+        <input id="college" type="text" name="entry.1981061594" placeholder="e.g., PBR VITS" required>
+      </div>
+
+      <!-- Required Google params -->
+      <input type="hidden" name="fvv" value="1">
+      <input type="hidden" name="draftResponse" value="[]">
+      <input type="hidden" name="pageHistory" value="0">
+
+      <div class="actions">
+        <button type="submit" id="submitBtn">Submit</button>
+        <span class="note">On submit you’ll see Google Forms’ confirmation.</span>
+      </div>
+    </form>
+  </div>
+<script>
+  // simple double-click guard
+  document.getElementById('gform').addEventListener('submit', function(){
+    const b = document.getElementById('submitBtn'); b.disabled = true; b.textContent = 'Submitting...';
+  });
+</script>
+</body>
+</html>

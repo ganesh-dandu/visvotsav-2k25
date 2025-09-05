@@ -158,6 +158,10 @@ section{
   margin: 0 auto;
 }
 
+.hero-content .badge{
+  margin-bottom: 1.5rem;
+}
+
 .badge {
   display: inline-flex;
   align-items: center;
@@ -165,7 +169,6 @@ section{
   background-color: #ffffff10;
   border-radius: 8px;
   padding: 0.5rem 1.25rem;
-  margin-bottom: 0.75rem;
   font-size: 0.75rem;
   color: #f5f5f5;
   border: 1px solid #ffffff20;
@@ -284,17 +287,14 @@ section{
    TECHNICAL EVENTS
    ======================= */
 
-.technical-events .badge {
-  margin-bottom: 1.5rem;
-}
-
 .text{
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 2rem;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 1.5rem;
+  flex-direction: column;
 }
 
 .text .left h2{
@@ -302,6 +302,8 @@ section{
   font-weight: 700;
   color: #f5f5f5;
   margin-bottom: 0.25rem;
+  text-align: center;
+  letter-spacing: -0.02em;
 }
 
 .text .left p{
@@ -309,6 +311,7 @@ section{
   color: #8C8C8C;
   max-width: 600px;
   line-height: 1.5;
+  text-align: center;
 }
 
 .grid-section {
@@ -675,6 +678,17 @@ section{
 /* =======================
    FOOTER
    ======================= */
+
+.footer{
+  width: 100%;
+  background-color: #ffffff;
+  border-top: 1px solid #ffffff10;
+  margin-top: 100px;
+  position: relative;
+  z-index: 10;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+}
+
 .footer-content{
   display: flex;
   justify-content: center;
@@ -684,7 +698,7 @@ section{
   font-family: 'DM Sans', sans-serif;
   font-weight: 400;
   text-align: center;
-  padding: 3rem;
+  padding: 2rem;
   margin: 0 auto;
   line-height: 1.5;
 }
@@ -695,14 +709,12 @@ section{
   max-width: 600px;
   margin: 0 auto;
   font-size: 1rem;
-  color: #8c8c8c;
+  color: #363636;
   line-height: 1.5;
   font-weight: 400;
   font-family: 'DM Sans', sans-serif;
   text-align: center;
   letter-spacing: normal;
-  padding: 2rem 1rem;
-
 }
 
 
@@ -862,4 +874,68 @@ section{
   animation-delay: 3s;
   font-size: 1rem;
 }
+
+.footer-content p{
+  font-size: 0.875rem;
+  padding: 1.5rem;;
+}}
+
+
+/* ===== Countdown Timer Section ===== */
+:root { --primary-color: #FE6715; }
+
+.countdown-section {
+  text-align: center;
+  margin: 2rem 0;
 }
+
+.countdown-label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #b4b4b4;
+  margin-bottom: 0.75rem;
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.countdown .time-seg {
+  background: #fff;
+  color: #0b0b0f;
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  min-width: 70px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.countdown .time-seg span {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.countdown .time-seg small {
+  display: block;
+  font-size: 0.75rem;
+  color: #555;
+  margin-top: 0.25rem;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .countdown {
+    gap: 0.5rem;
+  }
+  .countdown .time-seg {
+    min-width: 55px;
+    padding: 0.5rem;
+  }
+  .countdown .time-seg span {
+    font-size: 1.2rem;
+  }
+}
+
