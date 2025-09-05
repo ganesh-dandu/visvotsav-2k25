@@ -496,48 +496,98 @@ section{
   box-shadow: 0 10px 20px rgba(0,0,0,0.25);
 }
 
-.participate{
-  flex-direction: column;
-  padding: 1rem;
+/* =========================
+   WHY PARTICIPATE / PARTICIPATE GRID
+   Replacement: prevents overlap, enforces spacing, and is responsive.
+   Paste over existing .committee-section / .committee-grid / .committee-card / .participate rules
+   ========================= */
+
+.why-participate {
+    position: relative;      /* ensures this section forms its own stacking context */
+    padding: 4rem 0 3rem;    /* vertical spacing so it doesn't overlap neighbors */
+    background: transparent;
+    z-index: 1;
 }
 
-.participate i{
-  width: 3.125rem;
-  height: 3.125rem;
-  border: 2px solid #FE671520;
-  border-radius: 8px;
-  display: flex;
-  justify-content: center;  
-  align-items: center;
-  color: var(--primary-color);
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  background-color: #FE671510;
-  transition: all .3s ease;
+.why-participate .container {
+    position: relative;
+    z-index: 2;
 }
 
-.participate i:hover{
-  background-color: var(--primary-color);
-  color: #fff;
-  border: 2px solid var(--primary-color);
-  box-shadow: 
-  0px 42px 12px rgba(255, 107, 26, 0),
-  0px 27px 11px rgba(255, 107, 26, 0.01),
-  0px 15px 9px rgba(255, 107, 26, 0.05),
-  0px 7px 7px rgba(255, 107, 26, 0.09),
-  0px 2px 4px rgba(255, 107, 26, 0.10);
+/* Heading area (keeps same look as other .text blocks) */
+.why-participate .text {
+    margin-bottom: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
 }
 
-.participate h3{
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: #f5f5f5;
-  margin-bottom: 0.5rem;
-} 
+/* New grid specifically for the participate cards */
+.participate-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+    align-items: stretch;   /* cards stretch equally in height */
+}
 
-.participate p{
-  font-size: 0.875rem;
-  color: #8c8c8c;
+/* Individual card */
+.participate-card {
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    border: 1px solid rgba(255,255,255,0.04);
+    border-radius: 12px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+    /* min-height: 200px; */
+    transition: transform .18s ease, box-shadow .18s ease;
+    box-shadow: 0 6px 20px rgba(2,6,23,0.35);
+}
+
+/* icon block — visually consistent & doesn't overlap text */
+.participate-card .icon {
+    width: 56px;
+    height: 56px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #FE671510; /* subtle tinted background */
+    border: 1px solid rgba(254,103,21,0.08);
+    color: var(--primary-color);
+    font-size: 1.6rem;
+    flex-shrink: 0;
+}
+
+/* title + body */
+.participate-card h3 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #f5f5f5;
+}
+
+.participate-card p {
+    margin: 0;
+    color: #bfbfbf;
+    line-height: 1.5;
+    font-size: 0.875rem;
+}
+
+/* subtle hover effect */
+.participate-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 36px rgba(2,6,23,0.45);
+}
+
+/* Make sure the section doesn't collapse or overlap neighboring sections:
+   add an explicit bottom margin so footer / next sections sit below. */
+.why-participate {
+    margin-bottom: 3.5rem;
 }
 
 .cta-section{
@@ -741,6 +791,14 @@ section{
   .committee-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .participate-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    .why-participate {
+        padding: 3rem 0 2.5rem;
+    }
 }
 
 @media (max-width: 768px) {
@@ -905,6 +963,27 @@ section{
     font-size: 1rem;
     letter-spacing: normal;
   }
+
+      .participate-grid {
+        grid-template-columns: 1fr;
+        gap: 0.85rem;
+    }
+
+    .participate-card {
+        padding: 1rem;
+        min-height: auto;
+    }
+
+    .participate-card .icon {
+        width: 48px;
+        height: 48px;
+        font-size: 1.4rem;
+    }
+
+    .why-participate {
+        padding: 2rem 0 1.5rem;
+        margin-bottom: 2.5rem;
+    }
 }
 
 
