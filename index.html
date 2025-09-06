@@ -25,18 +25,19 @@
   <header class="header">
     <div class="container navbar">
       <div class="logo">
-        <img src="img/Logo.svg" alt="Visvotsav Logo">
+        <a href="#home"> <img src="img/Logo.svg" alt="Visvotsav Logo"></a>
       </div>
 
       <!-- Nav links -->
       <nav class="nav-links">
-        <a href="#">Home</a>
+        <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#technical-events">Events</a>
         <a href="#our-committee">Committee</a>
+        <a style="display: none;" href="https://drive.google.com/uc?export=download&id=1q0WHs6vzQt98Tb_1tKlzYsSlR4f--_0L" download="Visvotsav2K25" class="register-btn rstr">Download Brochure</a>
       </nav>
 
-      <a href="#technical-events" class="register-btn">Register Now</a>
+      <a href="https://drive.google.com/uc?export=download&id=1q0WHs6vzQt98Tb_1tKlzYsSlR4f--_0L" download="Visvotsav2K25" class="register-btn">Download Brochure</a>
 
       <!-- Hamburger -->
       <div class="menu-icon">
@@ -46,7 +47,7 @@
   </header>
 
   <!-- HERO -->
-  <section class="hero">
+  <section class="hero" id="home">
     <div class="container hero-content">
         <div class="emoji emojies1">
             <img src="img/emoji (1).svg" alt="">
@@ -96,7 +97,7 @@
     </div>
   </section>
 
-  <!-- EVENTS -->
+  <!-- TECHNICAL EVENTS -->
   <section class="technical-events" id="technical-events">
     <div class="container">
         <div class="text">
@@ -117,18 +118,19 @@
                   </div>
                   <div class="heading">
                     <h3>Paper Presentation</h3>
-                    <div class="people">
+                    <!-- <div class="people">
                       <i class="ph-fill ph-users"></i>
                       <h5>2</h5>
                     </div>
                     <div class="price">
                       <i class="ph-fill ph-currency-inr"></i>
                       <h5>300</h5>
-                    </div>
+                    </div> -->
                   </div>
                   <p>Present your research and ideas with clarity and impact.</p>
-                  <div class="cta">
-                      <a style="display:block"href="#" class="committee-btn">View Committee</a>
+                  <div class="event-btns">
+                      <a style="display:block"href="#" class="committee-btn" data-event-id="paper-presentation" type="button">View Details</a>
+                      <a style="display:block"href="https://forms.gle/KQHFgxnpJyemn6Uc8" class="register-btn" type="button">Register Now</a>
                   </div>
               </div>
               <div class="grid-item">
@@ -137,18 +139,19 @@
                   </div>
                   <div class="heading">
                     <h3>Poster Presentation</h3>
-                    <div class="people">
+                    <!-- <div class="people">
                       <i class="ph-fill ph-users"></i>
                       <h5>2</h5>
                     </div>
                     <div class="price">
                       <i class="ph-fill ph-currency-inr"></i>
                       <h5>300</h5>
-                    </div>
+                    </div> -->
                   </div>
                   <p>Showcase concepts visually and creatively on academic posters.</p>
-                  <div class="cta">
-                      <a style="display:block"href="#" class="committee-btn">View Committee</a>
+                  <div class="event-btns">
+                      <a style="display:block"href="#" class="committee-btn" data-event="poster-presentation" type="button">View Details</a>
+                      <a style="display:block"href="#" class="register-btn" type="button">Register Now</a>
                   </div>
               </div>
               <div class="grid-item">
@@ -157,18 +160,19 @@
                   </div>
                   <div class="heading">
                     <h3>Technical Quiz</h3>
-                    <div class="people">
+                    <!-- <div class="people">
                       <i class="ph-fill ph-users"></i>
                       <h5>3</h5>
                     </div>
                     <div class="price">
                       <i class="ph-fill ph-currency-inr"></i>
                       <h5>300</h5>
-                    </div>
+                    </div> -->
                   </div>
                   <p>Test your technical knowledge and enhance quick thinking.</p>
-                  <div class="cta">
-                      <a style="display:block"href="#" class="committee-btn">View Committee</a>
+                  <div class="event-btns">
+                      <a style="display:block"href="#" data-event="Technical Quiz" type="button" class="committee-btn">View Details</a>
+                      <a style="display:block"href="#" class="register-btn" type="button">Register Now</a>
                   </div>
               </div>
               <div class="grid-item">
@@ -177,18 +181,19 @@
                   </div>
                   <div class="heading">
                     <h3>Coding</h3>
-                    <div class="people">
+                    <!-- <div class="people">
                       <i class="ph-fill ph-users"></i>
                       <h5>2</h5>
                     </div>
                     <div class="price">
                       <i class="ph-fill ph-currency-inr"></i>
                       <h5>200</h5>
-                    </div>
+                    </div> -->
                   </div>
                   <p>Crack problems, code fast, and prove your logic. Win prizes.</p>
-                  <div class="cta">
-                      <a style="display:block"href="#" class="committee-btn">View Committee</a>
+                  <div class="event-btns">
+                      <a style="display:block"href="#" data-event="Coding Contest" type="button" class="committee-btn">View Details</a>
+                      <a style="display:block"href="#" class="register-btn" type="button">Register Now</a>
                   </div>
               </div>
               <div class="grid-item">
@@ -196,19 +201,20 @@
                     <img src="img/web-design.webp" alt="paper-presentation">
                   </div>
                   <div class="heading">
-                    <h3>WebDesign</h3>
-                    <div class="people">
+                    <h3>Web Design</h3>
+                    <!-- <div class="people">
                       <i class="ph-fill ph-users"></i>
                       <h5>2</h5>
                     </div>
                     <div class="price">
                       <i class="ph-fill ph-currency-inr"></i>
                       <h5>200</h5>
-                    </div>
+                    </div> -->
                   </div>
                   <p>Design sleek, functional websites that impress with your skills.</p>
-                  <div class="cta">
-                      <a style="display:block"href="#" class="committee-btn">View Committee</a>
+                  <div class="event-btns">
+                      <a style="display:block"href="#" data-event="Web Designing" type="button" class="committee-btn">View Details</a>
+                      <a style="display:block"href="#" class="register-btn" type="button">Register Now</a>
                   </div>
               </div>
               <div class="grid-item">
@@ -217,39 +223,40 @@
                   </div>
                   <div class="heading">
                     <h3>Circuitrix</h3>
-                    <div class="people">
+                    <!-- <div class="people">
                       <i class="ph-fill ph-users"></i>
                       <h5>1</h5>
                     </div>
                     <div class="price">
                       <i class="ph-fill ph-currency-inr"></i>
                       <h5>100</h5>
-                    </div>
+                    </div> -->
                   </div>
-                  <p>Build circuits, test ideas, and spark innovation.</p>
-                  <div class="cta">
-                      <a style="display:block"href="#" class="committee-btn">View Committee</a>
+                  <p>Build circuits, test creative ideas, and spark groundbreaking innovation.</p>
+                  <div class="event-btns">
+                      <a style="display:block"href="#" data-event="Circuitrix" type="button" class="committee-btn">View Details</a>
+                      <a style="display:block"href="#" class="register-btn" type="button">Register Now</a>
                   </div>
               </div>
-
               <div class="grid-item">
                   <div class="image">
                     <img src="img/project-expo.webp" alt="paper-presentation">
                   </div>
                   <div class="heading">
                     <h3>Project Expo</h3>
-                    <div class="people">
+                    <!-- <div class="people">
                       <i class="ph-fill ph-users"></i>
                       <h5>3</h5>
                     </div>
                     <div class="price">
                       <i class="ph-fill ph-currency-inr"></i>
                       <h5>300</h5>
-                    </div>
+                    </div> -->
                   </div>
                   <p>Build projects, test ideas, and spark innovation.</p>
-                  <div class="cta">
-                      <a style="display:block"href="#" class="committee-btn">View Committee</a>
+                  <div class="event-btns">
+                      <a style="display:block"href="#" data-event="Project Expo" type="button" class="committee-btn">View Details</a>
+                      <a style="display:block"href="#" class="register-btn" type="button">Register Now</a>
                   </div>
               </div>
 
@@ -290,7 +297,7 @@
                 </div>
                 <p>Take the mic and let your voice captivate and inspire the crowd.</p>
                 <div class="cta">
-                    <a style="display:block"href="#" class="committee-btn">View Committee</a>
+                    <a style="display:block"href="#" class="committee-btn">View Details</a>
                 </div>
             </div>
             <div class="grid-item">
@@ -310,7 +317,7 @@
                 </div>
                 <p>Test your Tollywood beats and team spirit in this fun-filled musical battle</p>
                 <div class="cta">
-                    <a style="display:block"href="#" class="committee-btn">View Committee</a>
+                    <a style="display:block"href="#" class="committee-btn">View Details</a>
                 </div>
             </div>
             <div class="grid-item">
@@ -330,7 +337,7 @@
                 </div>
                 <p>Speak with confidence and clarity, and let your words inspire the audience.</p>
                 <div class="cta">
-                    <a style="display:block"href="#" class="committee-btn">View Committee</a>
+                    <a style="display:block"href="#" class="committee-btn">View Details</a>
                 </div>
             </div>
             <div class="grid-item">
@@ -350,7 +357,7 @@
                 </div>
                 <p>Showcase your imagination and creativity through stokes and colours</p>
                 <div class="cta">
-                    <a style="display:block"href="#" class="committee-btn">View Committee</a>
+                    <a style="display:block"href="#" class="committee-btn">View Details</a>
                 </div>
             </div>
             <div class="grid-item">
@@ -370,7 +377,7 @@
                 </div>
                 <p>Act it out, guess it right! The ultimate game of expressions and fun</p>
                 <div class="cta">
-                    <a style="display:block"href="#" class="committee-btn">View Committee</a>
+                    <a style="display:block"href="#" class="committee-btn">View Details</a>
                 </div>
             </div>
             <div class="grid-item">
@@ -390,7 +397,7 @@
                 </div>
                 <p>Own the stage with your move - solo or group, bring the energy.</p>
                 <div class="cta">
-                    <a style="display:block"href="#" class="committee-btn">View Committee</a>
+                    <a style="display:block"href="#" class="committee-btn">View Details</a>
                 </div>
             </div>
             <div class="grid-item">
@@ -410,7 +417,7 @@
                 </div>
                 <p>Guess the hidden word by connecting images with quick wit and teamwork</p>
                 <div class="cta">
-                    <a style="display:block"href="#" class="committee-btn">View Committee</a>
+                    <a style="display:block"href="#" class="committee-btn">View Details</a>
                 </div>
             </div>
             <div class="grid-item">
@@ -430,7 +437,7 @@
                 </div>
                 <p>Test your knowledge across diverse topics and compete for the top spot.</p>
                 <div class="cta">
-                    <a style="display:block"href="#" class="committee-btn">View Committee</a>
+                    <a style="display:block"href="#" class="committee-btn">View Details</a>
                 </div>
             </div>
             <div class="grid-item">
@@ -450,7 +457,7 @@
                 </div>
                 <p>Showcase creativity and character with unique costumes on stage</p>
                 <div class="cta">
-                    <a style="display:block"href="#" class="committee-btn">View Committee</a>
+                    <a style="display:block"href="#" class="committee-btn">View Details</a>
                 </div>
             </div>
             <div class="grid-item">
@@ -470,7 +477,7 @@
                 </div>
                 <p>Solve clues, race across campus, and uncover hidden treasures.</p>
                 <div class="cta">
-                    <a style="display:block"href="#" class="committee-btn">View Committee</a>
+                    <a style="display:block"href="#" class="committee-btn">View Details</a>
                 </div>
             </div>
         </div>
@@ -683,7 +690,6 @@
     </div>
   </section>
 
-
   <section class="countdown-section">
   <div class="container">
     <p class="countdown-label">Registration closes in:</p>
@@ -696,14 +702,46 @@
   </div>
 </section>
 
-
-
 <!-- FOOTER -->
 <section class="footer">
   <div class="container footer-content">
     <p>Made with ❤️ by Team Visvotsav</p>
   </div>
 </section>
+
+<!-- EVENT DETAILS MODAL -->
+<!-- Replace your old modal with this -->
+<div id="event-modal" class="event-modal" aria-hidden="true" role="dialog" aria-labelledby="event-modal-title">
+  <div class="event-modal__backdrop" data-close></div>
+  <div class="event-modal__panel" role="document" aria-modal="true">
+    <button class="event-modal__close" aria-label="Close (Esc)" data-close>&times;</button>
+
+    <header class="event-modal__header">
+      <h2 id="event-modal-title">Event Title</h2>
+      <p id="event-modal-sub" class="event-modal__subtitle">Short tagline / category</p>
+    </header>
+
+    <main class="event-modal__body">
+      <section class="event-modal__section">
+        <h4>Event overview</h4>
+        <p id="modal-overview" class="modal-overview"></p>
+      </section>
+
+      <!-- container that will get 3 department cards injected -->
+      <div id="modal-dept-cards" class="modal-dept-cards" role="list" aria-label="Department details"></div>
+
+      <section class="event-modal__section">
+        <!-- <h4>Quick links</h4> -->
+        <div id="modal-links"></div>
+      </section>
+    </main>
+
+    <footer class="event-modal__footer">
+      <a id="modal-register" class="register-btn" target="_blank" rel="noopener">Register / Open Form</a>
+      <button class="event-modal__close-secondary" data-close>Close</button>
+    </footer>
+  </div>
+</div>
 
   <!-- JS -->
 <script src="app.js"></script>
