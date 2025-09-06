@@ -1,11 +1,9 @@
 const menuIcon = document.querySelector(".menu-icon");
 const navLinks = document.querySelector(".nav-links");
-
 menuIcon.addEventListener("click", (e) => {
     e.stopPropagation();
     navLinks.classList.toggle("active");
 });
-
 window.addEventListener("click", function (e) {
     if (
         navLinks.classList.contains("active") &&
@@ -15,33 +13,32 @@ window.addEventListener("click", function (e) {
         navLinks.classList.remove("active");
     }
 });
-
 navLinks.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", () => {
         navLinks.classList.remove("active");
     });
 });
 
-(function(){
+(function () {
     const deadline = new Date("2025-09-11T23:59:59");
     const daysEl = document.getElementById("days");
     const hoursEl = document.getElementById("hours");
     const minsEl = document.getElementById("minutes");
     const secsEl = document.getElementById("seconds");
-    function updateCountdown(){
+    function updateCountdown() {
         const now = new Date();
         let diff = Math.max(0, deadline - now);
-        const d = Math.floor(diff / (1000*60*60*24));
+        const d = Math.floor(diff / (1000 * 60 * 60 * 24));
         diff -= d * 86400000;
-        const h = Math.floor(diff / (1000*60*60));
+        const h = Math.floor(diff / (1000 * 60 * 60));
         diff -= h * 3600000;
-        const m = Math.floor(diff / (1000*60));
+        const m = Math.floor(diff / (1000 * 60));
         diff -= m * 60000;
         const s = Math.floor(diff / 1000);
-        daysEl.textContent = String(d).padStart(2,'0');
-        hoursEl.textContent = String(h).padStart(2,'0');
-        minsEl.textContent = String(m).padStart(2,'0');
-        secsEl.textContent = String(s).padStart(2,'0');
+        if (daysEl) daysEl.textContent = String(d).padStart(2, "0");
+        if (hoursEl) hoursEl.textContent = String(h).padStart(2, "0");
+        if (minsEl) minsEl.textContent = String(m).padStart(2, "0");
+        if (secsEl) secsEl.textContent = String(s).padStart(2, "0");
     }
     updateCountdown();
     setInterval(updateCountdown, 1000);
@@ -218,12 +215,117 @@ const EVENT_DEPARTMENTS = {
         },
         "ECE": null,
         "EEE": null
+    },
+    "Singing": {
+        register: "https://example.com/register/singing",
+        "CSE & Allied": {
+            venue: "Auditorium / Stage (TBD)",
+            faculty: [{ name: "Mr.SK. Abdul Shabbir (S&H)" }, { name: "Mr. K. Srinivasulu (S&H)" }],
+            students: []
+        },
+        "ECE": null,
+        "EEE": null
+    },
+    "Dance": {
+        register: "https://example.com/register/dance",
+        "CSE & Allied": {
+            venue: "Auditorium / Stage (TBD)",
+            faculty: [{ name: "Dr. R. Ranjit Kumar (ECE)" }, { name: "Mr. M. Ravikumar (Mech)" }],
+            students: []
+        },
+        "ECE": null,
+        "EEE": null
+    },
+    "Antyakshari": {
+        register: "https://example.com/register/antyakshari",
+        "CSE & Allied": {
+            venue: "Auditorium / Hall (TBD)",
+            faculty: [{ name: "Mr. N.V. Suryanarayana (Mech)" }, { name: "Mrs. M. Mounika (Mech)" }],
+            students: []
+        },
+        "ECE": null,
+        "EEE": null
+    },
+    "Dumb Charades": {
+        register: "https://example.com/register/dumb-charades",
+        "CSE & Allied": {
+            venue: "Auditorium / Stage (TBD)",
+            faculty: [{ name: "Mr. T. Bhanu Prakash (Civil)" }, { name: "Mrs. K. Pravallika (Civil)" }],
+            students: []
+        },
+        "ECE": null,
+        "EEE": null
+    },
+    "Elocution": {
+        register: "https://example.com/register/elocution",
+        "CSE & Allied": {
+            venue: "Seminar Hall (TBD)",
+            faculty: [{ name: "Mr. SK. Rameez (S&H)" }],
+            students: []
+        },
+        "ECE": null,
+        "EEE": null
+    },
+    "Drawing": {
+        register: "https://example.com/register/drawing",
+        "CSE & Allied": {
+            venue: "Drawing Room / Art Lab (TBD)",
+            faculty: [{ name: "Mr. A. Ramanjaneyulu (Mech)" }, { name: "Mr. D.C. Chennayya (Mech)" }],
+            students: []
+        },
+        "ECE": null,
+        "EEE": null
+    },
+    "Picture Connect": {
+        register: "https://example.com/register/picture-connect",
+        "CSE & Allied": {
+            venue: "Lecture Hall / Room (TBD)",
+            faculty: [{ name: "Mr. K. Naresh (Civil)" }],
+            students: []
+        },
+        "ECE": null,
+        "EEE": null
+    },
+    "General Quiz": {
+        register: "https://example.com/register/general-quiz",
+        "CSE & Allied": {
+            venue: "Quiz Hall / Seminar Room (TBD)",
+            faculty: [{ name: "Dr. O. Sheshaiah" }],
+            students: []
+        },
+        "ECE": null,
+        "EEE": null
+    },
+    "Fancy Dress": {
+        register: "https://example.com/register/fancy-dress",
+        "CSE & Allied": {
+            venue: "Stage / Open Area (TBD)",
+            faculty: [{ name: "Dr. O. Sheshaiah" }],
+            students: []
+        },
+        "ECE": null,
+        "EEE": null
+    },
+    "Treasure Hunt": {
+        register: "https://example.com/register/treasure-hunt",
+        "CSE & Allied": {
+            venue: "Campus-wide (TBD)",
+            faculty: [],
+            students: []
+        },
+        "ECE": null,
+        "EEE": null
     }
 };
 
 function escapeHtml(str) {
     if (!str && str !== 0) return "";
-    return String(str).replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/'/g, "&#39;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    return String(str)
+        .replace(/&/g, "&amp;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#39;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;");
 }
 
 function buildPhoneHtml(phone) {
@@ -244,7 +346,6 @@ function renderEventDepartments(eventKey) {
     const subtitleEl = document.querySelector(".event-modal__subtitle");
     if (titleEl) titleEl.textContent = eventKey || "Event Details";
     if (subtitleEl) subtitleEl.textContent = "Event Details";
-
     if (!data) {
         body.innerHTML = `<div style="color:#ffd7b8;padding:12px;border-radius:8px;background:rgba(255,134,56,0.03)">Details not found for <strong>${escapeHtml(eventKey)}</strong></div>`;
         if (regBtn) {
@@ -254,17 +355,17 @@ function renderEventDepartments(eventKey) {
         openModal();
         return;
     }
-
     if (regBtn) {
         if (data.register) {
             regBtn.href = data.register;
             regBtn.style.display = "inline-flex";
+            regBtn.setAttribute("target", "_blank");
+            regBtn.setAttribute("rel", "noopener");
         } else {
             regBtn.removeAttribute("href");
             regBtn.style.display = "none";
         }
     }
-
     let container = body.querySelector(".modal-dept-cards");
     if (!container) {
         container = document.createElement("div");
@@ -274,7 +375,6 @@ function renderEventDepartments(eventKey) {
     } else {
         container.innerHTML = "";
     }
-
     const deptOrder = ["CSE & Allied", "ECE", "EEE"];
     deptOrder.forEach((deptName) => {
         const dept = data[deptName];
@@ -284,13 +384,11 @@ function renderEventDepartments(eventKey) {
         header.className = "modal-dept-card__header";
         header.innerHTML = `<h3><i class="ph ph-building" aria-hidden="true"></i> ${escapeHtml(deptName)}</h3>`;
         card.appendChild(header);
-
         const venue = document.createElement("div");
         venue.className = "modal-dept-card__venue";
         const venueText = dept && dept.venue ? escapeHtml(dept.venue) : "No venue listed";
         venue.innerHTML = `<i class="ph ph-map-pin" aria-hidden="true"></i> ${venueText}`;
         card.appendChild(venue);
-
         if (!dept) {
             const note = document.createElement("div");
             note.className = "modal-dept-card__not-hosted";
@@ -299,7 +397,6 @@ function renderEventDepartments(eventKey) {
             container.appendChild(card);
             return;
         }
-
         const facultyWrap = document.createElement("div");
         facultyWrap.className = "modal-dept-faculty";
         const facTitle = document.createElement("h4");
@@ -321,7 +418,6 @@ function renderEventDepartments(eventKey) {
         }
         facultyWrap.appendChild(facList);
         card.appendChild(facultyWrap);
-
         const studentsWrap = document.createElement("div");
         studentsWrap.className = "modal-dept-students";
         const stuTitle = document.createElement("h4");
@@ -347,10 +443,8 @@ function renderEventDepartments(eventKey) {
         }
         studentsWrap.appendChild(table);
         card.appendChild(studentsWrap);
-
         container.appendChild(card);
     });
-
     openModal();
 }
 
@@ -388,50 +482,6 @@ function escClose(e) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    const menuIcon = document.querySelector(".menu-icon");
-    const navLinks = document.querySelector(".nav-links");
-    if (menuIcon && navLinks) {
-        menuIcon.addEventListener("click", function (e) {
-            e.stopPropagation();
-            navLinks.classList.toggle("active");
-        });
-        window.addEventListener("click", function (e) {
-            if (navLinks.classList.contains("active") && !navLinks.contains(e.target) && !menuIcon.contains(e.target)) {
-                navLinks.classList.remove("active");
-            }
-        });
-        navLinks.querySelectorAll("a").forEach((link) => {
-            link.addEventListener("click", () => {
-                navLinks.classList.remove("active");
-            });
-        });
-    }
-
-    (function () {
-        const deadline = new Date("2025-09-11T23:59:59");
-        const daysEl = document.getElementById("days");
-        const hoursEl = document.getElementById("hours");
-        const minsEl = document.getElementById("minutes");
-        const secsEl = document.getElementById("seconds");
-        function updateCountdown() {
-            const now = new Date();
-            let diff = Math.max(0, deadline - now);
-            const d = Math.floor(diff / (1000 * 60 * 60 * 24));
-            diff -= d * 86400000;
-            const h = Math.floor(diff / (1000 * 60 * 60));
-            diff -= h * 3600000;
-            const m = Math.floor(diff / (1000 * 60));
-            diff -= m * 60000;
-            const s = Math.floor(diff / 1000);
-            if (daysEl) daysEl.textContent = String(d).padStart(2, "0");
-            if (hoursEl) hoursEl.textContent = String(h).padStart(2, "0");
-            if (minsEl) minsEl.textContent = String(m).padStart(2, "0");
-            if (secsEl) secsEl.textContent = String(s).padStart(2, "0");
-        }
-        updateCountdown();
-        setInterval(updateCountdown, 1000);
-    })();
-
     const viewBtns = document.querySelectorAll(".committee-btn, .view-details, a[data-event]");
     viewBtns.forEach((btn) => {
         btn.addEventListener("click", function (ev) {
@@ -452,7 +502,6 @@ document.addEventListener("DOMContentLoaded", function () {
             renderEventDepartments(eventName);
         });
     });
-
     const modal = document.getElementById("event-modal");
     if (modal) {
         modal.querySelectorAll("button, [role='button']").forEach((el) => el.addEventListener("keydown", (e) => {
