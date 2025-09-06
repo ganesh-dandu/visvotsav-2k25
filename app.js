@@ -217,7 +217,7 @@ const EVENT_DEPARTMENTS = {
         "EEE": null
     },
     "Singing": {
-        register: "https://example.com/register/singing",
+        register: "https://forms.gle/1gtvTtAMmYQG5TKs9",
         "CSE & Allied": {
             venue: "Auditorium / Stage (TBD)",
             faculty: [{ name: "Mr.SK. Abdul Shabbir (S&H)" }, { name: "Mr. K. Srinivasulu (S&H)" }],
@@ -227,7 +227,7 @@ const EVENT_DEPARTMENTS = {
         "EEE": null
     },
     "Dance": {
-        register: "https://example.com/register/dance",
+        register: "https://forms.gle/9qzN27qvuTxeLVbr7",
         "CSE & Allied": {
             venue: "Auditorium / Stage (TBD)",
             faculty: [{ name: "Dr. R. Ranjit Kumar (ECE)" }, { name: "Mr. M. Ravikumar (Mech)" }],
@@ -237,7 +237,7 @@ const EVENT_DEPARTMENTS = {
         "EEE": null
     },
     "Antyakshari": {
-        register: "https://example.com/register/antyakshari",
+        register: "https://forms.gle/YBn3Une4G9gH3JAy7",
         "CSE & Allied": {
             venue: "Auditorium / Hall (TBD)",
             faculty: [{ name: "Mr. N.V. Suryanarayana (Mech)" }, { name: "Mrs. M. Mounika (Mech)" }],
@@ -247,7 +247,7 @@ const EVENT_DEPARTMENTS = {
         "EEE": null
     },
     "Dumb Charades": {
-        register: "https://example.com/register/dumb-charades",
+        register: "https://forms.gle/pTRK7VmUNnPcXNAC8",
         "CSE & Allied": {
             venue: "Auditorium / Stage (TBD)",
             faculty: [{ name: "Mr. T. Bhanu Prakash (Civil)" }, { name: "Mrs. K. Pravallika (Civil)" }],
@@ -257,7 +257,7 @@ const EVENT_DEPARTMENTS = {
         "EEE": null
     },
     "Elocution": {
-        register: "https://example.com/register/elocution",
+        register: "https://forms.gle/HaRtoiJpiFcUw6HZA",
         "CSE & Allied": {
             venue: "Seminar Hall (TBD)",
             faculty: [{ name: "Mr. SK. Rameez (S&H)" }],
@@ -267,7 +267,7 @@ const EVENT_DEPARTMENTS = {
         "EEE": null
     },
     "Drawing": {
-        register: "https://example.com/register/drawing",
+        register: "https://forms.gle/vDLMt2qZj8PCC7tb9",
         "CSE & Allied": {
             venue: "Drawing Room / Art Lab (TBD)",
             faculty: [{ name: "Mr. A. Ramanjaneyulu (Mech)" }, { name: "Mr. D.C. Chennayya (Mech)" }],
@@ -277,7 +277,7 @@ const EVENT_DEPARTMENTS = {
         "EEE": null
     },
     "Picture Connect": {
-        register: "https://example.com/register/picture-connect",
+        register: "https://forms.gle/rV1khYCEKEqyXxxS9",
         "CSE & Allied": {
             venue: "Lecture Hall / Room (TBD)",
             faculty: [{ name: "Mr. K. Naresh (Civil)" }],
@@ -287,7 +287,7 @@ const EVENT_DEPARTMENTS = {
         "EEE": null
     },
     "General Quiz": {
-        register: "https://example.com/register/general-quiz",
+        register: "https://forms.gle/oT8WLB5pUsJ7N1cy5",
         "CSE & Allied": {
             venue: "Quiz Hall / Seminar Room (TBD)",
             faculty: [{ name: "Dr. O. Sheshaiah" }],
@@ -297,7 +297,7 @@ const EVENT_DEPARTMENTS = {
         "EEE": null
     },
     "Fancy Dress": {
-        register: "https://example.com/register/fancy-dress",
+        register: "https://forms.gle/68KEXuwVoEGUfw8d7",
         "CSE & Allied": {
             venue: "Stage / Open Area (TBD)",
             faculty: [{ name: "Dr. O. Sheshaiah" }],
@@ -307,7 +307,7 @@ const EVENT_DEPARTMENTS = {
         "EEE": null
     },
     "Treasure Hunt": {
-        register: "https://example.com/register/treasure-hunt",
+        register: "https://forms.gle/GqeCBXFQcG4pVtY77",
         "CSE & Allied": {
             venue: "Campus-wide (TBD)",
             faculty: [],
